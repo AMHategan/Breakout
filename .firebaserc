@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "breakout-fb6bf": {
+      "hosting": {
+        "breakout": [
+          "breakout-fb6bf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "breakout-fb6bf"
+  }
+}

@@ -1,0 +1,30 @@
+<div *ngIf="rooms?.length>0;else noRooms">
+    <ul *ngFor="let room of rooms">
+        <div class="jumbotron text-center">
+            <div class="container center">
+                <li class="list-group-room rounded-0">
+                    <div class="flex-container">
+                        <div>
+                            <h1><a [routerLink]="['/room/'+room.$key]"><strong>{{room.name}}</strong></a></h1>
+                                <br><br>
+                            <a ><img src="{{room.image}}" class="tn"></a>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div>
+                            <p>{{room.description}}</p> <br><br>
+                            <h4>{{room.slogan}}</h4> <br><br> 
+                            <p>Difficulty:{{room.difficulty}}</p> <br><br>  
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </ul>
+</div>
+<ng-template #noRooms>
+    <hr>
+    <h5>There are no rooms to list</h5>
+</ng-template>
